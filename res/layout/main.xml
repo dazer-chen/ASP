@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/step1Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Step 1 - Find your location" />
+    <Button
+        android:id="@+id/findCoord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/step1Label"
+        android:text="Find Current Location" /> 
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/findCoord"
+        android:layout_alignParentLeft="true"
+        android:paddingBottom="5px"
+        android:layout_height="2dip"
+        android:background="#FF00FF00"
+        android:paddingTop="5px"
+        android:src="@android:drawable/divider_horizontal_bright" />
+    <TextView
+        android:id="@+id/step2Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingTop="15dp"
+        android:layout_below="@+id/findCoord"
+        android:text="Step 2 - Set the time to run" />
+    <TimePicker
+        android:id="@+id/startTime"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/step2Label" />
+    <TextView
+        android:id="@+id/startLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/startTime"
+        android:layout_toRightOf="@+id/startTime"
+        android:layout_centerVertical="true"
+        android:text="Daily Start Time" />
+    <TimePicker
+        android:id="@+id/endTime"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/startTime"/>
+    <TextView
+        android:id="@+id/endLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/endTime"
+        android:layout_alignTop="@+id/endTime"
+        android:layout_marginTop="14dp"
+        android:text="Daily End Time" />
+
+    <EditText
+        android:id="@+id/radText"
+        android:layout_width="82dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/endTime"
+        android:numeric="integer"
+        android:maxLength="4"
+        android:hint="100"
+        android:inputType="number"
+        android:singleLine="true" />
+
+   <TextView
+        android:id="@+id/radiusDescriptionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/radText"
+        android:layout_below="@+id/endTime"
+        android:text="Enter Distance in Feet when you want to be notified" />
+   <ImageView
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/radText"
+        android:layout_alignParentLeft="true"
+        android:paddingBottom="5px"
+        android:layout_height="2dip"
+        android:background="#FF00FF00"
+        android:paddingTop="5px"
+        android:src="@android:drawable/divider_horizontal_bright" />
+   <TextView
+        android:id="@+id/step3Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingTop="15dp"
+        android:layout_below="@+id/radText"
+        android:text="Step 3 - Start Alternate Side Parking Reminder (or Stop)" />
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/step3Label"
+        android:text="Start ASP Reminder" />
+    <Button
+        android:id="@+id/stopServices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/startButton"
+        android:layout_below="@+id/step3Label"
+        android:text="Stop Running" />
+</RelativeLayout>
